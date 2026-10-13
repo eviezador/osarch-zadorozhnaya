@@ -9,7 +9,9 @@ Date:
 Steps, with commands in code blocks. Not prose about the steps.
 
 ```
-<command>
+<co<img width="853" height="189" alt="Screenshot 2026-10-12 at 20 31 22" src="https://github.com/user-attachments/assets/fbcf7023-6a23-4ac8-b860-300afefc78bc" />
+<img width="853" height="189" alt="Screenshot 2026-10-12 at 20 31 22" src="https://github.com/user-attachments/assets/57327ec3-7e71-4ba7-9e34-138dd26e822a" />
+mmand>. 
 <output, trimmed>
 ```
 
