@@ -9,11 +9,26 @@ Date:
 Steps, with commands in code blocks. Not prose about the steps.
 
 ```
-<co<img width="853" height="189" alt="Screenshot 2026-10-12 at 20 31 22" src="https://github.com/user-attachments/assets/fbcf7023-6a23-4ac8-b860-300afefc78bc" />
-<img width="853" height="189" alt="Screenshot 2026-10-12 at 20 31 22" src="https://github.com/user-attachments/assets/57327ec3-7e71-4ba7-9e34-138dd26e822a" />
-mmand>. 
-<output, trimmed>
-```
+
+Firstly, I found Terminal and start to use it to fin information
+Also, I used AI to help me with commands ( I did not notice them in presentation at first)
+1. screen
+the first line is the command
+the second line gives me information about my core count
+the third one gives me information about my Chip
+2. screen
+it gives me information about my memory
+RAM memory = 16
+there also I can see Type
+3. screen
+I can see that I have 420GB free space for vm.
+Medium type is ssd
+4. I understood that my screen does not show firmware type , only numbers
+5. THe last screen gives me information that I can do virtualization 
+
+
+
+
 
 ## Result
 
