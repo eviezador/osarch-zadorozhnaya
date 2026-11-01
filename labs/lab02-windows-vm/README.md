@@ -39,7 +39,6 @@ Date: <31.10.2026 - 01.11.1016>
 In Step 3 (item 9), copy-paste between the host and the guest did not work after installing Guest Additions. It turned out that in Lab 1 my partner had changed the VirtualBox host key from the right Ctrl to the left Ctrl, because her keyboard does not have a right Ctrl key. We fixed this by changing the host key to the right Shift key, after which copy-paste worked.
 ## Evidence
 
-- [evidence/](evidence/) — one line per file on what it proves
 - [evidence/ipconfig-windows.txt](evidence/ipconfig-windows.txt) — Windows address
 - [evidence/ip-addr-linux.txt](evidence/ip-addr-linux.txt) — Ubuntu address
 - [evidence/ping-both-ways.txt](evidence/ping-both-ways.txt) — both directions and the internet
