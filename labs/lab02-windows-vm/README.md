@@ -1,7 +1,7 @@
 # Lab 2 — A Windows guest, and a network between them
 
 Pair: Eva Zadorozhnaya / Shemetova Vitalina              
-Machine: partner's laptop, Windows 11 Pro, 24 GB RAM, 512 GB SSD, AMD Ryzen 7 7435HS (8 cores / 16 threads); guests Ubuntu Server + Windows 11 Enterprise eval
+Machine: partner's laptop, Windows 11 Pro, 24 GB RAM, 512 GB SSD, AMD Ryzen 7 7435HS ; guests Ubuntu Server + Windows 11 Enterprise eval
 Date: <31.10.2026 - 01.11.1016>
 
 ## What I did
