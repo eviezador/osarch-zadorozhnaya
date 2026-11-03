@@ -31,6 +31,35 @@ Linux and Windows, an Intel/AMD host with about 24 GB RAM and 512 GB SSD, intern
 
 ## 3. What I did
 
+## Resources calculated from the host
+
+Host: 24 GB RAM, 512 GB SSD (teammate's laptop). Before the guests were started, the host already used 12.6 GB of RAM and 11.1 GB was available (see `evidence/host-memory-before.png`).
+
+| Resource | Calculation |
+|---|---|
+| RAM | 11.1 GB available − 4 GB (Windows guest) − 4 GB (Ubuntu guest) = 3.1 GB left for the host. This is enough to keep working, but not much, so I did not give the guests more than 4 GB each. |
+| CPU | 2 vCPU for Windows + 2 vCPU for Ubuntu = 4 vCPU. A guest should never get more than half of the host's cores, and 2 vCPU per guest stays within that rule. |
+| Disk | 64 GB Windows disk (thin, grows only as needed) + the Ubuntu disk , out of 512 GB SSD. Even with a generous Ubuntu disk, most of the SSD stays free. |
+
+I also tested what happens if this limit is ignored: when the guests were promised more memory than the host has, 98% of RAM was in use and only 531 MB was available (`evidence/host-memory-after.png`).
+
+### Settings that differ from the default
+
+| Setting | Default | Mine | Why |
+|---|---|---|---|
+| Unattended installation | on | Skip | I install Windows by hand so that each step can be documented |
+| Network mode | NAT | NAT Network (both guests) | The guests must see each other and the internet |
+| Shared Clipboard | Disabled | Bidirectional | Command output has to be copied from the guest to the host |
+| Host key | Right Ctrl | Right Shift | Keyboard without a right Ctrl key; copy-paste did not work otherwise |
+| Windows account | Microsoft account | Local account (Domain join instead) | A test machine does not need a Microsoft account |
+| Windows firewall | Blocks incoming ping | One rule allowing ICMP echo | The firewall stays on; only ping is opened |
+
+### Resources calculated from the host
+
+Host: 24 GB RAM, 512 GB SSD (teammate's laptop). Before the guests were started, Windows on the host already used 12.6 GB of RAM and 11.1 GB was available (see `host-memory-before.png`).
+
+
+
 ## 4. Evidence
 
 ## 5. What I would do differently
