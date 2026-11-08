@@ -179,7 +179,7 @@ Why a rule and not switching the firewall off: the rule opens only ping; switchi
 ### 17. Check the internet from both guests
 In Ubuntu run `ping -c 4 ubuntu.com`, in Windows run `ping ubuntu.com`.
 
-> Check: replies from both. All four pings, unedited: `evidence/05-ping-between-guests.txt`.
+> Check: replies from both. All four pings, unedited: [evidence/05-ping-between-guests.txt](evidence/05-ping-between-guests.txt).
 
 ## Part E. Clean snapshot and rollback
 
