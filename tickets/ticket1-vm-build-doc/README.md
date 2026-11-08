@@ -72,8 +72,6 @@ New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -Icmp
 
 ## 4. Evidence
 
-## 4. Evidence
-
 Screenshots of the VirtualBox settings and the Windows guest were taken on my teammate's laptop, where both guests ran. Screenshot 06 was taken on my own Mac.
 
 | File | What it proves |
