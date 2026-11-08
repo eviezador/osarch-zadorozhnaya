@@ -30,6 +30,14 @@ Linux and Windows, an Intel/AMD host with about 24 GB RAM and 512 GB SSD, intern
 
 ## 3. What I did
 
+1. Downloaded the Windows 11 Enterprise evaluation ISO (free, 90 days, no product key): https://www.microsoft.com/en-us/evalcenter/evaluate-windows-11-enterprise
+2. Created a VM `lab02-windows` in VirtualBox 7: 2 vCPU, 4 GB RAM, 64 GB dynamic disk, EFI + Secure Boot + virtual TPM 2.0.
+3. Installed Windows 11 Enterprise (evaluation) with a local account, then installed Guest Additions so that the screen resizes and copy-paste works.
+4. Put both guests (`lab01-ubuntu` and `lab02-windows`) on one NAT Network.
+5. Found the addresses with `ipconfig` (Windows, 10.0.2.3) and `ip addr` (Ubuntu, 10.0.2.15).
+6. Tested ping in both directions and to ubuntu.com (`evidence/05-ping-between-guests.txt`).
+7. Fixed the Ubuntu → Windows ping with a firewall rule (see below).
+
 ## Resources calculated from the host
 
 Host: 24 GB RAM, 512 GB SSD (teammate's laptop). Before the guests were started, the host already used 12.6 GB of RAM and 11.1 GB was available (see `evidence/host-memory-before.png`).
@@ -53,9 +61,12 @@ I also tested what happens if this limit is ignored: when the guests were promis
 | Windows account | Microsoft account | Local account (Domain join instead) | A test machine does not need a Microsoft account |
 | Windows firewall | Blocks incoming ping | One rule allowing ICMP echo | The firewall stays on; only ping is opened |
 
-### Resources calculated from the host
+### One thing that went wrong, and how I fixed it
+Ping from Ubuntu to Windows timed out, while Windows to Ubuntu worked. The reason: Windows Defender Firewall blocks incoming ICMP echo requests by default, and Ubuntu's firewall is off. I did not turn the firewall off, because that would open the whole machine. I added one rule that allows only ping, in PowerShell as Administrator.
 
-Host: 24 GB RAM, 512 GB SSD (teammate's laptop). Before the guests were started, Windows on the host already used 12.6 GB of RAM and 11.1 GB was available (see `host-memory-before.png`).
+```
+New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow
+```
 
 
 
