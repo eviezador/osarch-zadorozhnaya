@@ -138,8 +138,7 @@ Why the same name: only machines on the same network see each other.
 
 Why a local account: a test machine does not need a personal Microsoft account.
 
-> Check: the Windows desktop appears. `evidence/04b-system-info-windows.txt` shows Windows 11 Enterprise Evaluation.
-evidence/04b-system-info-windows.txt](evidence/04b-system-info-windows.txt)
+> Check: the Windows desktop appears. The file [evidence/04b-system-info-windows.txt](evidence/04b-system-info-windows.txt) shows Windows 11 Enterprise Evaluation.
 
 ### 13. Install the Guest Additions
 In the VM window open Devices → Insert Guest Additions CD image. In Windows open File Explorer → the CD drive and run `VBoxWindowsAdditions.exe`. Accept the defaults and restart (Restart anyway if it asks).
