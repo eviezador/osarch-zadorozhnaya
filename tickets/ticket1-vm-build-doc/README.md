@@ -46,7 +46,7 @@ Host: 24 GB RAM, 512 GB SSD (teammate's laptop). Before the guests were started,
 |---|---|
 | RAM | 11.1 GB available − 4 GB (Windows guest) − 4 GB (Ubuntu guest) = 3.1 GB left for the host. This is enough to keep working, but not much, so I did not give the guests more than 4 GB each. |
 | CPU | 2 vCPU for Windows + 2 vCPU for Ubuntu = 4 vCPU. A guest should never get more than half of the host's cores, and 2 vCPU per guest stays within that rule. |
-| Disk | 64 GB Windows disk (thin, grows only as needed) + the Ubuntu disk , out of 512 GB SSD. Even with a generous Ubuntu disk, most of the SSD stays free. |
+| Disk | 64 GB Windows disk (thin) + 25 GB Ubuntu disk (thin) = 89 GB at most, out of 512 GB SSD. Most of the SSD stays free. |
 
 I also tested what happens if this limit is ignored: when the guests were promised more memory than the host has, 98% of RAM was in use and only 531 MB was available (`evidence/host-memory-after.png`).
 
