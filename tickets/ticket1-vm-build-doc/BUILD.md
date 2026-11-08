@@ -94,7 +94,7 @@ ip addr
 
 Look at the network card (`enp0s3`), not `lo`. The line `inet 10.0.2.x` is the address of the VM.
 
-> Check: the output shows Ubuntu Server and an address starting with `10.0.2.` (mine: 10.0.2.15). Full output: `evidence/04-guest-uname.txt`.
+> Check: the output shows Ubuntu Server and an address starting with `10.0.2.` (mine: 10.0.2.15). Full output: [evidence/04-guest-uname.txt](evidence/04-guest-uname.txt).
 
 ## Part C. The Windows 11 guest
 
