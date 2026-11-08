@@ -1,0 +1,51 @@
+C:\Users\vita>systeminfo
+
+Host Name:                     DESKTOP-DOP72VO
+OS Name:                       Microsoft Windows 11 Enterprise Evaluation
+OS Version:                    10.0.26300 N/A Build 26300
+OS Manufacturer:               Microsoft Corporation
+OS Configuration:              Standalone Workstation
+OS Build Type:                 Multiprocessor Free
+Registered Owner:              vita
+Registered Organization:       N/A
+Product ID:                    00329-20000-00001-AA219
+Original Install Date:         10/31/2026, 1:24:31 PM
+System Boot Time:              11/1/2026, 10:59:26 PM
+System Manufacturer:           innotek GmbH
+System Model:                  VirtualBox
+System Type:                   x64-based PC
+Processor(s):                  1 Processor(s) Installed.
+                               [01]: AMD64 Family 25 Model 68 Stepping 1 AuthenticAMD ~3094 Mhz
+BIOS Version:                  innotek GmbH VirtualBox, 12/1/2006
+Windows Directory:             C:\WINDOWS
+System Directory:              C:\WINDOWS\system32
+Boot Device:                   \Device\HarddiskVolume1
+System Locale:                 en-us;English (United States)
+Input Locale:                  en-us;English (United States)
+Time Zone:                     (UTC+06:00) Bishkek
+Total Physical Memory:         4,077 MB
+Available Physical Memory:     1,982 MB
+Virtual Memory: Max Size:      5,485 MB
+Virtual Memory: Available:     3,731 MB
+Virtual Memory: In Use:        1,754 MB
+Page File Location(s):         C:\pagefile.sys
+Domain:                        WORKGROUP
+Logon Server:                  \\DESKTOP-DOP72VO
+Hotfix(s):                     4 Hotfix(s) Installed.
+                               [01]: KB5126052
+                               [02]: KB5121794
+                               [03]: KB5129195
+                               [04]: KB5124007
+Network Card(s):               1 NIC(s) Installed.
+                               [01]: Intel(R) PRO/1000 MT Desktop Adapter
+                                     Connection Name: Ethernet
+                                     DHCP Enabled:    Yes
+                                     DHCP Server:     10.0.2.2
+                                     IP address(es)
+                                     [01]: 10.0.2.3
+                                     [02]: fe80::d234:f432:83bb:c451
+Virtualization-based security: Status: Not enabled
+                               App Control for Business policy: Enforced
+                               App Control for Business user mode policy: Audit
+                               Security Features Enabled:
+Hyper-V Requirements:          A hypervisor has been detected. Features required for Hyper-V will not be displayed.
