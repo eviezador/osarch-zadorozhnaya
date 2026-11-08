@@ -94,8 +94,6 @@ Note on the Ubuntu version: the wizard screenshot (01b) offers Ubuntu 25.04 in i
 
 ## 5. What I would do differently
 
-## 5. What I would do differently
-
 - **Record the settings of every VM at the moment I create it.** After the build I could not check how much memory the Ubuntu VM on my teammate's laptop had: one screenshot showed 2048 MB, but my teammate said 4096 MB. Next time I will take a screenshot of Settings → System and Storage right after creating each VM, so the numbers in the README come from evidence and not from memory.
 - **Take a screenshot at every step while building.** I only have screenshots of the settings and the results, not of the Windows installer or the Guest Additions. Because of that, BUILD.md describes those steps in words, and a reader has no picture to compare with.
 - **Check the host key and the shared clipboard before the installation.** Copy-paste between the host and the guest did not work, because the host key had been changed to the left Ctrl and my keyboard has no right Ctrl key. We fixed it by setting the host key to the right Shift, but it cost time in the middle of the build.
