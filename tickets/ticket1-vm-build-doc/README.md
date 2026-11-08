@@ -72,6 +72,26 @@ New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -Icmp
 
 ## 4. Evidence
 
+## 4. Evidence
+
+Screenshots of the VirtualBox settings and the Windows guest were taken on my teammate's laptop, where both guests ran. Screenshot 06 was taken on my own Mac.
+
+| File | What it proves |
+|---|---|
+| [evidence/01-new-vm-wizard.png](evidence/01-new-vm-wizard.png) | The wizard page for `lab02-windows`: 4096 MB memory, 2 CPUs, "Use EFI" ticked. |
+| [evidence/01b-new-vm-wizard-ubuntu.png](evidence/01b-new-vm-wizard-ubuntu.png) | The wizard page for `lab01-ubuntu`: VM name and the Ubuntu Server ISO. |
+| [evidence/02-disk-settings.png](evidence/02-disk-settings.png) | The Windows disk is 64 GB and "Pre-allocate Full Size" is not ticked, so the disk is thin (dynamically allocated). |
+| [evidence/02b-disk-settings-ubuntu.jpg](evidence/02b-disk-settings-ubuntu.jpg) | The Ubuntu disk is 25 GB and also thin. |
+| [evidence/03-network-adapter.png](evidence/03-network-adapter.png) | Adapter 1 of the Windows guest is attached to a NAT Network, not to plain NAT. |
+| [evidence/03b-network-adapter-ubuntu.png](evidence/03b-network-adapter-ubuntu.png) | Adapter 1 of the Ubuntu guest is attached to the same NAT Network. |
+| [evidence/04-guest-uname.txt](evidence/04-guest-uname.txt) | The Linux guest runs Ubuntu Server 26.04.1 LTS (`uname`, `lsb_release`), its address is 10.0.2.15, and it reaches ubuntu.com. |
+| [evidence/04b-system-info-windows.txt](evidence/04b-system-info-windows.txt) | The Windows guest runs Windows 11 Enterprise Evaluation with about 4 GB of memory, and its address is 10.0.2.3. |
+| [evidence/05-ping-between-guests.txt](evidence/05-ping-between-guests.txt) | Both guests reach each other and the internet (unedited output). |
+| [evidence/06-snapshot-list.png](evidence/06-snapshot-list.png) | The clean snapshot `clean-install` exists for the Ubuntu VM and can be rolled back to. |
+| [evidence/07-windows-vm-settings.png](evidence/07-windows-vm-settings.png) | The Windows guest has UEFI, Secure Boot and TPM 2.0 turned on. |
+
+Note on the Ubuntu version: the wizard screenshot (01b) offers Ubuntu 25.04 in its version list, but that is only the wizard's setting. The version actually installed is Ubuntu Server 26.04.1 LTS, as `04-guest-uname.txt` shows.
+
 ## 5. What I would do differently
 
 At least one thing. "Nothing, it all went well" is not an answer.
