@@ -31,7 +31,7 @@ Why Server and not Desktop: a test machine does not need a graphical desktop, so
 > Check: the file name ends with `.iso` and has `server` in it.
 
 ### 3. Download the Windows 11 Enterprise evaluation ISO
-Open https://www.microsoft.com/en-us/evalcenter/evaluate-windows-11-enterprise, fill in the short form and download the 64-bit ISO in English (United States).
+Open https://www.microsoft.com/en-us/evalcenter/download-windows-11-enterprise, fill in the short form and download the 64-bit ISO in English (United States).
 
 Why the evaluation: it is free and legal for 90 days and needs no product key. Never type your own key into a test machine and never download a "pre-activated" Windows, because that is pirated software. Trade-off: after 90 days the evaluation expires, so this machine is for testing only.
 
