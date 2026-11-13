@@ -35,9 +35,9 @@ Date: 12.11.2026
 
 ### Kingston FURY Beast DDR5-5600, 16 GB
 ![](evidence/kingston-fury-ddr5.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: DDR5 UDIMM desktop memory module, 16 GB capacity, 5600 MT/s speed, 288 pins.
+- Connects to: A DDR5 DIMM slot on a desktop motherboard (such as the ASUS PRIME B650M-A).
+- Limit: Fits only DDR5-compatible motherboards; the physical key notch prevents insertion into DDR4 slots, and it cannot fit laptop SO-DIMM slots.
 - Source: < https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory>
 
 ### Crucial DDR4-3200, 16 GB DIMM
