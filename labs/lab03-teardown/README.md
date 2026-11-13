@@ -28,9 +28,9 @@ Date: 12.11.2026
 
 ### MSI PRO B760M-A WIFI DDR4
 ![](evidence/msi-b760m-a.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: Micro-ATX desktop motherboard built on the Intel B760 chipset.
+- Connects to: Intel Socket LGA 1700, 4x DDR4 DIMM slots (dual-channel, up to 128 GB), 2x M.2 slots (PCIe 4.0 x4), 4x SATA 6Gb/s ports, and standard 24-pin ATX + 8-pin (plus 4-pin) CPU power connectors.
+- Limit: Accepts only 12th, 13th, and 14th Gen Intel Core processors (14th Gen requires a BIOS update) and supports only DDR4 RAM (incompatible with AMD CPUs and DDR5 modules).
 - Source: <https://www.msi.com/Motherboard/PRO-B760M-A-WIFI-DDR4>
 
 ### Kingston FURY Beast DDR5-5600, 16 GB
