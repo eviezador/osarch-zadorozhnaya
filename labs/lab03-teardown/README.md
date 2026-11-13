@@ -7,9 +7,9 @@ Date: 12.11.2026
 
 ### AMD Ryzen 5 7600
 ![](evidence/ryzen5-7600.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: Desktop processor with 6 cores / 12 threads, 3.8 GHz base clock (up to 5.1 GHz max boost), 32 MB L3 cache (38 MB total cache), and 65 W default TDP.
+- Connects to: Socket AM5 and a dual-channel DDR5 memory controller (up to 5200 MT/s).
+- Limit: Fits only AM5 motherboards and supports only DDR5 RAM (incompatible with AM4 boards and DDR4 memory).
 - Source: <https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html>
 
 ### Intel Core i5-13400
