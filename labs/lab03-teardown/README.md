@@ -63,9 +63,9 @@ Date: 12.11.2026
 
 ### Corsair RM750e
 ![](evidence/corsair-rm750e.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is:  Fully modular ATX 3.0 power supply unit (PSU) rated at 750 W with 80 PLUS Gold efficiency.
+- Connects to: Motherboard (24-pin ATX and 8-pin EPS/CPU connectors), storage drives (SATA power), and graphics card (PCIe / 12VHPWR).
+- Limit: Total continuous power output is capped at 750 W across all connected components; uses standard ATX dimensions, so it will not fit compact SFX-only cases, and requires Corsair Type-4 modular cables.
 - Source: < https://www.corsair.com/us/en/p/psu/cp-9020262-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020262-na>
 
 ### AMD Wraith Stealth
