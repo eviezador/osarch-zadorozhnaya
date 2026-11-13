@@ -21,9 +21,9 @@ Date: 12.11.2026
 
 ### ASUS PRIME B650M-A
 ![](evidence/asus-b650m-a.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: Micro-ATX desktop motherboard built on the AMD B650 chipset.
+- Connects to: AMD Socket AM5, 4x DDR5 DIMM slots (dual-channel, up to 128/192 GB), 2x M.2 slots (1x PCIe 5.0 x4 and 1x PCIe 4.0 x4), 4x SATA 6Gb/s ports, and standard 24-pin ATX + 8-pin CPU power connectors.
+- Limit: Accepts only AMD Ryzen 7000/8000/9000 Series desktop processors (Ryzen 8000/9000 require a BIOS update) and supports only DDR5 RAM (incompatible with Intel CPUs and DDR4 modules).
 - Source: <https://www.asus.com/motherboards-components/motherboards/prime/prime-b650m-a/>
 
 ### MSI PRO B760M-A WIFI DDR4
