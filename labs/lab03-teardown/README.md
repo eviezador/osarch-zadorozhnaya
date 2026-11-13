@@ -14,9 +14,9 @@ Date: 12.11.2026
 
 ### Intel Core i5-13400
 ![](evidence/i5-13400.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: Desktop processor with 10 cores (6 Performance-cores + 4 Efficient-cores) / 16 threads, 2.50 GHz P-core base clock (up to 4.60 GHz max turbo), 20 MB Intel Smart Cache (L3), and 65 W processor base power (148 W maximum turbo power).
+- Connects to: Socket LGA 1700 (FCLGA1700) and a dual-channel hybrid memory controller supporting DDR5 (up to 4800 MT/s) or DDR4 (up to 3200 MT/s).
+- Limit: Fits only LGA 1700 motherboards; only one memory standard (either DDR4 or DDR5) can be used at a time, fixed by the chosen motherboard's DIMM slots.
 - Source: <https://www.intel.com/content/www/us/en/products/sku/230495/intel-core-i513400-processor-20m-cache-up-to-4-60-ghz/specifications.html>
 
 ### ASUS PRIME B650M-A
