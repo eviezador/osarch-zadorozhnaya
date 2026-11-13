@@ -70,9 +70,9 @@ Date: 12.11.2026
 
 ### AMD Wraith Stealth
 ![](evidence/wraith-stealth.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: Low-profile air CPU cooler (AMD Wraith Stealth) with an aluminum heatsink, bundled in the box with the AMD Ryzen 5 7600 processor, rated for 65 W TDP.
+- Connects to: Socket AM5 mounting backplate/holes on the motherboard (via 4 spring-loaded screws) and the 4-pin CPU_FAN PWM header.
+- Limit: Designed strictly for 65 W TDP processors (cannot adequately cool higher-wattage or overclocked CPUs) and fits only AMD AM4/AM5 mounting holes (incompatible with Intel LGA 1700 sockets).
 - Source: <https://www.amd.com/en/products/processors/ecosystem/cpu-cooler-solutions.html>
 
 ## Two builds
