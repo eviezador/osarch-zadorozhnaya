@@ -49,9 +49,9 @@ Date: 12.11.2026
 
 ### Samsung 990 PRO 1 TB
 ![](evidence/samsung-990-pro.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is:  Internal NVMe SSD, 1 TB capacity, PCIe 4.0 x4 (NVMe 2.0) interface, M.2 2280 form factor, up to 7,450 MB/s sequential read and 6,900 MB/s write speed.
+- Connects to: An M.2 slot (M-key) directly on the motherboard without any data or power cables.
+- Limit: Requires an M.2 slot wired with PCIe lanes (cannot connect to standard SATA ports); its speed is capped by the motherboard's PCIe 4.0 x4 bus bandwidth (~7,500 MB/s), or even lower if installed in a PCIe 3.0 slot.
 - Source: <https://www.samsung.com/uk/memory-storage/nvme-ssd/990-pro-1tb-nvme-pcie-gen-4-mz-v9p1t0bw/>
 
 ### Samsung 870 EVO 1 TB
