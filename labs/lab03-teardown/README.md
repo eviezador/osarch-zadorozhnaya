@@ -42,9 +42,9 @@ Date: 12.11.2026
 
 ### Crucial DDR4-3200, 16 GB DIMM
 ![](evidence/crucial-ddr4-3200.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is: DDR4 UDIMM desktop memory module, 16 GB capacity, 3200 MT/s speed (PC4-25600), 288 pins, CL22 latency, 1.2 V.
+- Connects to: A DDR4 DIMM slot on a desktop motherboard (such as the MSI PRO B760M-A WIFI DDR4).
+- Limit:Fits only DDR4-compatible desktop motherboards; the physical key notch prevents insertion into DDR5 slots, and its full length makes it incompatible with laptop SO-DIMM slots.
 - Source: < https://www.crucial.com/memory/ddr4/ct16g4dfra32a>
 
 ### Samsung 990 PRO 1 TB
