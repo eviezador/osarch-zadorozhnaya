@@ -56,9 +56,9 @@ Date: 12.11.2026
 
 ### Samsung 870 EVO 1 TB
 ![](evidence/samsung-870-evo.png)
-- What it is: <...>
-- Connects to: <...>
-- Limit: <...>
+- What it is:  Internal SATA SSD, 1 TB capacity, SATA 6 Gb/s (SATA III) interface, 2.5-inch form factor, up to 560 MB/s sequential read and 530 MB/s write speed.
+- Connects to:  A motherboard SATA port via a SATA data cable and to the power supply (PSU) via a SATA power cable.
+- Limit: Bottlenecked by the SATA III bus ceiling (~550–560 MB/s), making it over 13 times slower than PCIe 4.0 NVMe drives; physically incompatible with M.2 slots.
 - Source: < https://www.samsung.com/kz_ru/memory-storage/sata-ssd/870-evo-1tb-sata-3-2-5-ssd-mz-77e1t0bw/?srsltid=AYCX9vKXfD2slmEeISeKeHuohaIuEWILz_0wr7IYrLdnzDEXq_Yi9O2J>
 
 ### Corsair RM750e
