@@ -92,29 +92,32 @@ Step 3 — The Motherboards
 
 ## Two builds
 
-Build 1: AMD AM5 / DDR5 System
 
+## Two builds
 
-Part	Model	Why it fits here
-CPU	AMD Ryzen 5 7600	Matches the motherboard's AM5 socket and supports DDR5 memory.
-Motherboard	ASUS PRIME B650M-A	Provides the AM5 socket for the Ryzen 5 7600 and DDR5 DIMM slots.
-Memory	Kingston FURY Beast DDR5-5600 16GB	Matches the board's DDR5 DIMM slots and the CPU's DDR5 memory controller.
-SSD	Samsung 990 PRO 1 TB	Connects directly into one of the board's two M.2 PCIe 4.0/5.0 slots without cables.
-PSU	Corsair RM750e (750 W)	Provides standard 24-pin ATX and 8-pin CPU power connectors with plenty of wattage headroom.
-Cooler	AMD Wraith Stealth (Stock Cooler)	Bundled with the Ryzen 5 7600, fits AM5 mounting holes, and handles its 65 W TDP.
+### Build 1 (AMD AM5 / DDR5)
 
-### Build 2
+| Part | Model | Why it fits here |
+| :--- | :--- | :--- |
+| CPU | AMD Ryzen 5 7600 | Matches the motherboard's AM5 socket and supports DDR5 memory. |
+| Motherboard | ASUS PRIME B650M-A | Provides the AM5 socket for the Ryzen 5 7600 and DDR5 DIMM slots. |
+| Memory | Kingston FURY Beast DDR5-5600, 16 GB | Matches the board's DDR5 DIMM slots and the CPU's DDR5 memory controller. |
+| SSD | Samsung 990 PRO 1 TB | Connects directly into one of the board's two M.2 PCIe 4.0/5.0 slots without cables. |
+| PSU | Corsair RM750e (750 W) | Provides standard 24-pin ATX and 8-pin CPU power connectors with plenty of wattage headroom. |
+| Cooler | AMD Wraith Stealth (Stock Cooler) | Bundled with the Ryzen 5 7600, fits AM5 mounting holes, and handles its 65 W TDP. |
 
-Build 2: Intel LGA 1700 / DDR4 System
+### Build 2 (Intel LGA 1700 / DDR4)
 
+| Part | Model | Why it fits here |
+| :--- | :--- | :--- |
+| CPU | Intel Core i5-13400 | Matches the motherboard's LGA 1700 socket and supports DDR4 memory. |
+| Motherboard | MSI PRO B760M-A WIFI DDR4 | Provides the LGA 1700 socket for the i5-13400 and DDR4 DIMM slots. |
+| Memory | Crucial DDR4-3200, 16 GB DIMM | Matches the board's DDR4 UDIMM slots and the i5-13400's DDR4 memory controller. |
+| SSD | Samsung 870 EVO 1 TB | Connects to one of the board's four SATA 6Gb/s ports via a SATA data cable. |
+| PSU | *Missing (needs an ATX PSU)* | Only one power supply was provided in the 10-part list (already assigned to Build 1). |
+| Cooler | *Missing (needs an LGA 1700 cooler)* | Only one stock cooler was listed in the 10 parts (and the AM5 cooler does not fit LGA 1700). |
 
-Part	Model	Why it fits here
-CPU	Intel Core i5-13400	Matches the motherboard's LGA 1700 socket and supports DDR4 memory.
-Motherboard	MSI PRO B760M-A WIFI DDR4	Provides the LGA 1700 socket for the i5-13400 and DDR4 DIMM slots.
-Memory	Crucial DDR4-3200 16 GB DIMM	Matches the board's DDR4 UDIMM slots and the i5-13400's DDR4 memory controller.
-SSD	Samsung 870 EVO 1 TB	Connects to one of the board's four SATA 6Gb/s ports via a SATA data cable.
-PSU	Missing (needs an ATX PSU)	Only one power supply was provided in the 10-part list (already assigned to Build 1).
-Cooler	Missing (needs an LGA 1700 cooler)	Only one stock cooler was listed in the 10 parts (and the AM5 cooler does not fit LGA 1700).
+What each build still needs: **Build 1** still needs a monitor with a display cable (the Ryzen 5 7600 has integrated Radeon Graphics, so a discrete GPU is not required), a keyboard/mouse, an OS installer USB drive, and a power cord plus a case power button (or jumping the front-panel power pins). **Build 2** is missing an **ATX power supply (PSU)**, an **LGA 1700 CPU cooler**, a **SATA data cable** for the 2.5" SSD, as well as a monitor, peripherals, an OS installer, and a power cord/button (the non-F i5-13400 has integrated Intel UHD 730 graphics).
 
 
 ```
