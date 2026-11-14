@@ -140,7 +140,9 @@ The three operating systems use different naming conventions and units for the s
 
 ## Evidence
 
-* `evidence/windows-specs.txt` — PowerShell hardware output collected from my partner's Windows laptop (`AMD Ryzen 7 7435HS`, 24 GB DDR5, Micron NVMe SSD), as my primary machine is a MacBook.
-* `evidence/linux-specs.txt` — Terminal output from my Ubuntu ARM64 virtual machine running on VMware (`2` vCPUs, `4 GB` virtual RAM, `25 GB` virtual NVMe disk).
-* `evidence/macos-specs.txt` — Terminal output collected directly from my host MacBook (`Apple M5`, `16 GB` LPDDR5, `APPLE SSD AP0512Z`).
-* `evidence/photos/` — Folder containing all 10 official manufacturer screenshots for Part 1.
+## Evidence
+
+[evidence/windows-specs.txt](evidence/windows-specs.txt) — PowerShell hardware output collected from my partner's Windows laptop (`AMD Ryzen 7 7435HS`, 24 GB DDR5, Micron NVMe SSD), as my primary machine is a MacBook.
+[evidence/linux-specs.txt](evidence/linux-specs.txt) — Terminal output from my Ubuntu ARM64 virtual machine running on VMware (`2` vCPUs, `4 GB` virtual RAM, `25 GB` virtual NVMe disk).
+[evidence/macos-specs.txt](evidence/macos-specs.txt) — Terminal output collected directly from my host MacBook (`Apple M5`, `16 GB` LPDDR5, `APPLE SSD AP0512Z`).
+[evidence/photos/](evidence/photos/) — Folder containing all 10 official manufacturer screenshots for Part 1.
