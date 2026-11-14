@@ -1,0 +1,50 @@
+$ sysctl -n machdep.cpu.brand_string
+Apple M5
+
+$ sysctl hw.physicalcpu hw.logicalcpu hw.memsize
+hw.physicalcpu: 10
+hw.logicalcpu: 10
+hw.memsize: 17179869184
+
+$ system_profiler SPMemoryDataType
+Memory:
+
+      Memory: 16 GB
+      Type: LPDDR5
+      Manufacturer: Micron
+
+
+$ diskutil info disk0
+   Device Identifier:         disk0
+   Device Node:               /dev/disk0
+   Whole:                     Yes
+   Part of Whole:             disk0
+   Device / Media Name:       APPLE SSD AP0512Z
+
+   Volume Name:               Not applicable (no file system)
+   Mounted:                   Not applicable (no file system)
+   File System:               None
+
+   Content (IOContent):       GUID_partition_scheme
+   OS Can Be Installed:       No
+   Media Type:                Общий
+   Protocol:                  Apple Fabric
+   SMART Status:              Verified
+
+   Disk Size:                 500.3 GB (500277792768 Bytes) (exactly 977105064 512-Byte-Units)
+   Device Block Size:         4096 Bytes
+
+   Media OS Use Only:         No
+   Media Read-Only:           No
+   Volume Read-Only:          Not applicable (no file system)
+
+   Device Location:           Internal
+   Removable Media:           Fixed
+
+   Solid State:               Yes
+   Hardware AES Support:      Yes
+
+
+$ uname -m
+arm64
+

@@ -1,0 +1,43 @@
+PS C:\Users\Vita> Get-CimInstance Win32_Processor | Select Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed
+
+
+Name                                            NumberOfCores NumberOfLogicalProcessors MaxClockSpeed
+----                                            ------------- ------------------------- -------------
+AMD Ryzen 7 7435HS                                          8                        16          3100
+
+
+PS C:\Users\Vita> Get-CimInstance Win32_PhysicalMemory | Select DeviceLocator, Capacity, Speed, ConfiguredClockSpeed, SMBIOSMemoryType, FormFactor
+
+
+DeviceLocator        : DIMM 0
+Capacity             : 12884901888
+Speed                : 4800
+ConfiguredClockSpeed : 4800
+SMBIOSMemoryType     : 34
+FormFactor           : 12
+
+DeviceLocator        : DIMM 0
+Capacity             : 12884901888
+Speed                : 4800
+ConfiguredClockSpeed : 4800
+SMBIOSMemoryType     : 34
+FormFactor           : 12
+
+
+
+PS C:\Users\Vita> Get-PhysicalDisk | Select FriendlyName, MediaType, BusType, Size
+
+FriendlyName                   MediaType BusType         Size
+------------                   --------- -------         ----
+Micron MTFDKCD512QFM-1BD1AABLA SSD       NVMe    512110190592
+
+
+PS C:\Users\Vita> Get-Volume C
+
+DriveLetter FriendlyName FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------ -------------- --------- ------------ ----------------- -------------      ----
+C                        NTFS           Fixed     Healthy      OK                     45.71 GB 475.86 GB
+
+
+PS C:\Users\Vita> $env:PROCESSOR_ARCHITECTURE
+AMD64
