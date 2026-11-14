@@ -133,15 +133,14 @@ What each build still needs: **Build 1** still needs a monitor with a display ca
 The three operating systems use different naming conventions and units for the same hardware concepts: Windows reports 64-bit x86 as `AMD64` and returns capacities in raw bytes (`Capacity`, `Size`), macOS identifies Apple Silicon as `arm64` and hides RAM clock speed due to unified on-package `LPDDR5` memory, while Linux reports the same ARM architecture as `aarch64`. Additionally, the Linux virtual machine only sees virtualized hardware exposed by VMware rather than the real Mac host: it hides the `Apple M5` model name behind `-`, restricts CPU cores from `10` to `2` and total RAM from `16 GB` to `4 GB` (`3.3 GiB` usable), and abstracts the physical `APPLE SSD AP0512Z` into a `25G` `VMware Virtual NVMe Disk`.
 
 
-
-```
-
-## Result
-
 ## What did not work the first time
 
-At least one thing. What I saw, what it turned out to be, what I did about it.
+* **Finding exact official part images:** Searching for `AMD Ryzen 5 7600` initially returned the `Ryzen 5 7600X` product page, and the official `Ryzen 5 7600` page showed a generic Ryzen logo banner instead of a physical chip/box photo. Similarly, the AMD cooling page first displayed the RGB `Wraith Prism` cooler instead of the bundled `Wraith Stealth`. I verified the exact non-X model URL and scrolled down to the `Wraith Stealth` section to capture the right screenshots.
+* **Transferring the Linux log file from the headless Ubuntu VM:** Because my Ubuntu Server VM runs in a terminal-only window without a GUI or shared clipboard, copy-pasting commands and dragging files to macOS did not work initially. I typed the commands directly in the VM terminal, checked its local IP address with `hostname -I`, and transferred `linux-specs.txt` to my Mac via `scp`.
 
 ## Evidence
 
-- [evidence/](evidence/) — one line per file on what it proves
+* `evidence/windows-specs.txt` — PowerShell hardware output collected from my partner's Windows laptop (`AMD Ryzen 7 7435HS`, 24 GB DDR5, Micron NVMe SSD), as my primary machine is a MacBook.
+* `evidence/linux-specs.txt` — Terminal output from my Ubuntu ARM64 virtual machine running on VMware (`2` vCPUs, `4 GB` virtual RAM, `25 GB` virtual NVMe disk).
+* `evidence/macos-specs.txt` — Terminal output collected directly from my host MacBook (`Apple M5`, `16 GB` LPDDR5, `APPLE SSD AP0512Z`).
+* `evidence/photos/` — Folder containing all 10 official manufacturer screenshots for Part 1.
