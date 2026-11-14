@@ -92,9 +92,6 @@ Step 3 — The Motherboards
 
 ## Two builds
 
-
-## Two builds
-
 ### Build 1 (AMD AM5 / DDR5)
 
 | Part | Model | Why it fits here |
