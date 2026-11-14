@@ -75,12 +75,46 @@ Date: 12.11.2026
 - Limit: Designed strictly for 65 W TDP processors (cannot adequately cool higher-wattage or overclocked CPUs) and fits only AMD AM4/AM5 mounting holes (incompatible with Intel LGA 1700 sockets).
 - Source: <https://www.amd.com/en/products/processors/ecosystem/cpu-cooler-solutions.html>
 
+Step 3 — The Motherboards
+
+1. ASUS PRIME B650M-A
+	• Socket: AMD Socket AM5.
+	• Chipset: AMD B650.
+	• Memory: DDR5, 4x DIMM slots (Dual-Channel, up to 128/192 GB).
+	• Storage: 2x M.2 slots (1x PCIe 5.0 x4, 1x PCIe 4.0 x4) and 4x SATA 6Gb/s ports.
+	• CPU Support: AMD Ryzen 7000 Series desktop processors out of the box; Ryzen 8000 and 9000 Series supported with a BIOS update.
+2. MSI PRO B760M-A WIFI DDR4
+	• Socket: Intel Socket LGA 1700.
+	• Chipset: Intel B760.
+	• Memory: DDR4, 4x DIMM slots (Dual-Channel, up to 128 GB).
+	• Storage: 2x M.2 slots (PCIe 4.0 x4) and 4x SATA 6Gb/s ports.
+	• CPU Support: 12th and 13th Gen Intel Core processors out of the box; 14th Gen Intel Core supported with a BIOS update.
+
 ## Two builds
-### Build 1
-| Part | Model | Why it fits here |
+
+Build 1: AMD AM5 / DDR5 System
+
+
+Part	Model	Why it fits here
+CPU	AMD Ryzen 5 7600	Matches the motherboard's AM5 socket and supports DDR5 memory.
+Motherboard	ASUS PRIME B650M-A	Provides the AM5 socket for the Ryzen 5 7600 and DDR5 DIMM slots.
+Memory	Kingston FURY Beast DDR5-5600 16GB	Matches the board's DDR5 DIMM slots and the CPU's DDR5 memory controller.
+SSD	Samsung 990 PRO 1 TB	Connects directly into one of the board's two M.2 PCIe 4.0/5.0 slots without cables.
+PSU	Corsair RM750e (750 W)	Provides standard 24-pin ATX and 8-pin CPU power connectors with plenty of wattage headroom.
+Cooler	AMD Wraith Stealth (Stock Cooler)	Bundled with the Ryzen 5 7600, fits AM5 mounting holes, and handles its 65 W TDP.
+
 ### Build 2
-| Part | Model | Why it fits here |
-What each build still needs: …
+
+Build 2: Intel LGA 1700 / DDR4 System
+
+
+Part	Model	Why it fits here
+CPU	Intel Core i5-13400	Matches the motherboard's LGA 1700 socket and supports DDR4 memory.
+Motherboard	MSI PRO B760M-A WIFI DDR4	Provides the LGA 1700 socket for the i5-13400 and DDR4 DIMM slots.
+Memory	Crucial DDR4-3200 16 GB DIMM	Matches the board's DDR4 UDIMM slots and the i5-13400's DDR4 memory controller.
+SSD	Samsung 870 EVO 1 TB	Connects to one of the board's four SATA 6Gb/s ports via a SATA data cable.
+PSU	Missing (needs an ATX PSU)	Only one power supply was provided in the 10-part list (already assigned to Build 1).
+Cooler	Missing (needs an LGA 1700 cooler)	Only one stock cooler was listed in the 10 parts (and the AM5 cooler does not fit LGA 1700).
 
 
 ```
