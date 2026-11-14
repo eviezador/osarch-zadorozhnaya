@@ -116,6 +116,23 @@ Step 3 — The Motherboards
 
 What each build still needs: **Build 1** still needs a monitor with a display cable (the Ryzen 5 7600 has integrated Radeon Graphics, so a discrete GPU is not required), a keyboard/mouse, an OS installer USB drive, and a power cord plus a case power button (or jumping the front-panel power pins). **Build 2** is missing an **ATX power supply (PSU)**, an **LGA 1700 CPU cooler**, a **SATA data cable** for the 2.5" SSD, as well as a monitor, peripherals, an OS installer, and a power cord/button (the non-F i5-13400 has integrated Intel UHD 730 graphics).
 
+## Part 2 — Same facts, three operating systems
+
+## Comparison
+
+| Fact | Windows (PowerShell) | Linux (Ubuntu VM) | macOS |
+| :--- | :--- | :--- | :--- |
+| **CPU model** | `Get-CimInstance Win32_Processor \| Select Name` (`AMD Ryzen 7 7435HS`) | `lscpu` (Vendor `Apple`, Model name `-` — hypervisor hides the exact chip name) | `sysctl -n machdep.cpu.brand_string` (`Apple M5`) |
+| **Cores / threads** | `Get-CimInstance Win32_Processor \| Select NumberOfCores, NumberOfLogicalProcessors` (`8` cores / `16` threads) | `lscpu` (`2` virtual CPUs / `2` cores, `1` thread per core) | `sysctl hw.physicalcpu hw.logicalcpu` (`10` physical / `10` logical) |
+| **Total memory** | `Get-CimInstance Win32_PhysicalMemory \| Select Capacity` (`24 GB` / two `12884901888`-byte modules) | `free -h` (`3.3Gi` usable out of `4 GB` allocated to the VM) | `sysctl hw.memsize` (`17179869184` bytes / `16 GB`) |
+| **Memory modules and speed** | `Get-CimInstance Win32_PhysicalMemory \| Select DeviceLocator, Speed, SMBIOSMemoryType` (`2x DIMM 0`, `4800 MT/s`, DDR5 / type `34`) | `sudo dmidecode -t memory` (`1x 4 GB` virtual DIMM, Manufacturer `VMware Virtual RAM`, `Speed: Unknown`, `4800 MT/s` configured) | `system_profiler SPMemoryDataType` (`16 GB`, `LPDDR5`, Manufacturer `Micron`, speed hidden) |
+| **Disk model and type** | `Get-PhysicalDisk \| Select FriendlyName, MediaType, BusType` (`Micron MTFDKCD512QFM-1BD1AABLA`, `SSD`, `NVMe`) | `lsblk -d -o NAME,MODEL,ROTA,TRAN,SIZE` (`nvme0n1`, `VMware Virtual NVMe Disk`, `nvme`, `25G`) | `diskutil info disk0` (`APPLE SSD AP0512Z`, Solid State `Yes`, Protocol `Apple Fabric`) |
+| **Free space** | `Get-Volume C` (`45.71 GB` free of `475.86 GB`) | `df -h /` (`6.4G` available of `11G` root partition) | `diskutil info disk0` (`500.3 GB` total disk size; free space shown on the APFS data volume) |
+| **Architecture (x86-64 / ARM64)** | `$env:PROCESSOR_ARCHITECTURE` (`AMD64`) | `uname -m` (`aarch64`) | `uname -m` (`arm64`) |
+
+The three operating systems use different naming conventions and units for the same hardware concepts: Windows reports 64-bit x86 as `AMD64` and returns capacities in raw bytes (`Capacity`, `Size`), macOS identifies Apple Silicon as `arm64` and hides RAM clock speed due to unified on-package `LPDDR5` memory, while Linux reports the same ARM architecture as `aarch64`. Additionally, the Linux virtual machine only sees virtualized hardware exposed by VMware rather than the real Mac host: it hides the `Apple M5` model name behind `-`, restricts CPU cores from `10` to `2` and total RAM from `16 GB` to `4 GB` (`3.3 GiB` usable), and abstracts the physical `APPLE SSD AP0512Z` into a `25G` `VMware Virtual NVMe Disk`.
+
+
 
 ```
 
