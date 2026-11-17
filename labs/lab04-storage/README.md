@@ -1,11 +1,41 @@
 # Lab 4 — Partition, mirror, fail, recover
 
-Pair: Eva Zadorozhnaya (I get Windows evidence from Vitalins Shemetova) · Date: 17.11.2026 · Hypervisor: VMware Fusion (Ubuntu guest on my Mac)
+Pair: Eva Zadorozhnaya + Vitalina Shemetova (Windows part) · Date: 17.11.2026 (the Windows part was done on 14.11.2026) · Hypervisor: VMware Fusion (Ubuntu guest), VirtualBox (Windows guest) · Date: 17.11.2026 · Hypervisor: VMware Fusion (Ubuntu guest on my Mac)
 
 ## Windows
-I did not do the Windows part of this lab. The Windows guest from Lab 2 exists only on my teammate's laptop, because my Mac has an Apple Silicon chip and cannot run the Windows 11 evaluation image. I got evidence from team's laptop.
+The Windows part was done by my partner, Vitalina Shemetova, on her laptop in the `lab02-windows` VM (VirtualBox), on 14.11.2026. I did not do it myself, because my Mac has an Apple Silicon chip and cannot run the Windows 11 evaluation image. The output below is hers, pasted unedited. The whole file is [evidence/windows-partition.txt](evidence/windows-partition.txt), and a Disk Management screenshot is [evidence/windows-disk-management.png](evidence/windows-disk-management.png).
 
-MBR or GPT: I would choose GPT. Windows 11 boots with UEFI, which uses GPT, and GPT keeps a backup copy of the partition table and checksums it, while MBR is limited to 2 TiB and four primary partitions.
+```
+PS C:\Users\vita> Get-Disk | Format-Table Number,FriendlyName,PartitionStyle,Size
+
+Number FriendlyName  PartitionStyle        Size
+------ ------------  --------------        ----
+     0 VBOX HARDDISK GPT            68719476736
+     1 VBOX HARDDISK GPT             2147483648
+
+
+PS C:\Users\vita> Get-Partition -DriveLetter E
+
+
+   DiskPath: \\?\scsi#disk&ven_vbox&prod_harddisk#4&2617aeae&0&020000#{53f56307-b6bf-11d0-94f
+2-00a0c91efb8b}
+
+PartitionNumber  DriveLetter Offset                           Size Type
+---------------  ----------- ------                           ---- ----
+2                E           16777216                      1.98 GB Basic
+
+
+PS C:\Users\vita> Get-Volume -DriveLetter E
+
+DriveLetter FriendlyName FileSystemType DriveType HealthStatus OperationalStatus SizeRemainin
+                                                                                            g
+----------- ------------ -------------- --------- ------------ ----------------- ------------
+E           LAB04        NTFS           Fixed     Healthy      OK                     1.96 GB
+```
+
+The new disk is disk 1: it is GPT and 2147483648 bytes (2 GB; the lab text asks for 1 GB, this disk was created bigger). Its partition has the letter E, the label LAB04 and NTFS, and 1.96 GB of its 1.98 GB are free. The partition number is 2 and its offset is 16777216 bytes (16 MB), so partition 1 is probably the 16 MB reserved partition that Windows creates on a GPT disk.
+
+MBR or GPT: GPT. Windows 11 boots with UEFI, which uses GPT, and GPT keeps a backup copy of the partition table and checksums it, while MBR is limited to 2 TiB and four primary partitions.
 
 ## Linux – layout before and after
 
@@ -127,3 +157,5 @@ No, RAID 1 does not help here. A deletion is written to both disks of the mirror
 - [evidence/checksum-before.txt](evidence/checksum-before.txt) – checksums of the two files before the failure
 - [evidence/checksum-after-failure.txt](evidence/checksum-after-failure.txt) – the same checksums after the failure, identical
 - [evidence/array-rebuilt.txt](evidence/array-rebuilt.txt) – the mirror after adding the third disk, State: clean
+- [evidence/windows-partition.txt](evidence/windows-partition.txt) – Windows disk, partition and volume output (my partner's laptop)
+- [evidence/windows-disk-management.png](evidence/windows-disk-management.png) – the same disk in Disk Management
