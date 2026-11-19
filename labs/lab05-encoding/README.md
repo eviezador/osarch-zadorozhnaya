@@ -56,10 +56,3 @@ Files:
 - [file-after.txt](evidence/file-after.txt) — `file` and hex dump after the fix
 - [fix.sh](scripts/fix.sh) — the conversion script
 
-Before the fix (Excel):
-
-![Before: Excel](evidence/before-excel.png)
-
-After the fix (Excel, LibreOffice Calc and cat):
-
-![After: Excel, LibreOffice and cat](evidence/opens-correctly.png)
