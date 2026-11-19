@@ -40,5 +40,15 @@ PY
 The script uses Python instead of `iconv` + `sed` from the template: the `iconv` shipped with macOS may not support RK1048, and macOS `sed` (BSD) does not understand `\r` and needs `sed -i ''`. Python's `kz1048` codec does the same conversion.
 
 ## Verification
-- `file` now says: `Unicode text, UTF-8 (with BOM) text` ([evidence/file-after.txt](evidence/file-after.txt)) — UTF-8 with BOM, and no "CRLF" any more, so the
+- `file` now says: `Unicode text, UTF-8 (with BOM) text` ([evidence/file-after.txt](evidence/file-after.txt)) — UTF-8 with BOM, and no "CRLF" any more, so the line endings are LF.
+- The dump starts with `ef bb bf` (BOM); Cyrillic letters are `d0 xx` / `d1 xx` pairs, Kazakh letters `d2 xx` / `d3 xx`.
+- Excel (double-click): every name is correct, including Kazakh letters (Әбдірахманова, Қасымов, Нұрлан, Өмірзақова, Үміт), and each field is in its own column.
+- Terminal: `cat evidence/staff-fixed.csv` shows all names correctly.
+
+![After: Excel](evidence/opens-correctly.png)
+
+## What did not work the first time
+- Copying the file into my Ubuntu guest did not work, so I did the lab in the macOS Terminal instead (the brief allows it).
+- The template `fix.sh` (`iconv -f RK1048` + `sed -i 's/\r$//'`) is written for GNU tools on Linux and does not work as-is on macOS, so I rewrote the conversion in Python.
+- I could not install LibreOffice, so the fixed file was verified in two applications (Excel and `cat`) instead of three.
 
