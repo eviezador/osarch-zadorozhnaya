@@ -43,3 +43,22 @@ The script uses Python instead of `iconv` + `sed` from the template: the `iconv`
 ## What did not work the first time
 - Copying the file into my Ubuntu guest did not work, so I did the lab in the macOS Terminal instead (the brief allows it).
 - The template `fix.sh` (`iconv -f RK1048` + `sed -i 's/\r$//'`) is written for GNU tools on Linux and does not work as-is on macOS, so I rewrote the conversion in Python.
+
+## Evidence
+
+Files:
+- [staff-broken.csv](evidence/staff-broken.csv) — the original, untouched
+- [staff-fixed.csv](evidence/staff-fixed.csv) — the fixed file
+- [diagnosis.txt](evidence/diagnosis.txt) — the diagnosis, written before the fix
+- [file-before.txt](evidence/file-before.txt) — `file` output before the fix
+- [hexdump-before.txt](evidence/hexdump-before.txt) — hex dump before the fix
+- [file-after.txt](evidence/file-after.txt) — `file` and hex dump after the fix
+- [fix.sh](scripts/fix.sh) — the conversion script
+
+Before the fix (Excel):
+
+![Before: Excel](evidence/before-excel.png)
+
+After the fix (Excel, LibreOffice Calc and cat):
+
+![After: Excel, LibreOffice and cat](evidence/opens-correctly.png)
