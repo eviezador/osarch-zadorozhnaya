@@ -9,7 +9,7 @@ Name: Eva Zadorozhnaya · Date: 19.11.2026 · Tools: macOS Terminal (Apple Silic
 
 ## Diagnosis (made before the fix)
 - `file` said: Non-ISO extended-ASCII text, with CRLF line terminators (evidence/file-before.txt) — one byte per letter, a legacy code page; `file` cannot tell which one, so the bytes decide. (evidence/file-before.txt)
-- - `file` now says: `Unicode text, UTF-8 (with BOM) text` (evidence/file-after.txt) — UTF-8 with BOM, and no "CRLF" any more, so the line endings are LF.
+- `file` now says: `Unicode text, UTF-8 (with BOM) text` (evidence/file-after.txt) — UTF-8 with BOM, and no "CRLF" any more, so the line endings are LF.
 - First 16 bytes: `49 44 3b d4 e0 ec e8 eb e8 ff 3b c8 ec ff 3b ce` = `ID;Фамилия;Имя;О` (evidence/hexdump-before.txt)
 - Encoding: **KZ-1048** (iconv name `RK1048`) — because every Cyrillic letter is one byte, not a `D0`/`D1` pair (so not UTF-8): "Фамилия" = `d4 e0 ec e8 eb e8 ff`. The surname on line 2 starts with byte `A3`: in KZ-1048 `A3` = "Ә" → "Әбдірахманова"; in Windows-1251 `A3` = "Ј" → "Јбдірахманова", which is wrong. Decoded as KZ-1048, every name, Russian and Kazakh, reads correctly.
 - Line ending: **CRLF** — because line 1 ends with `0d 0a` (offset `0x24`–`0x25`).
