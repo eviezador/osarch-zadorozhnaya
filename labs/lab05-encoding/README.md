@@ -1,24 +1,45 @@
 # Lab 5 — Encoding forensics
 
-Pair:                     Driver first half:
-Machine:
-Date:
+Name: Eva Zadorozhnaya · Date: 19.11.2026 · Tools: macOS Terminal (Apple Silicon), Excel
 
-## What I did
+## What I received
+- Excel: [TODO]
+- LibreOffice: [TODO]
+- Terminal (`cat`): Latin letters and digits readable, all Cyrillic letters shown as garbage symbols
 
-Steps, with commands in code blocks. Not prose about the steps.
+## Diagnosis (made before the fix)
+- `file` said: (evidence/file-before.txt)
+- First 16 bytes: `49 44 3b d4 e0 ec e8 eb e8 ff 3b c8 ec ff 3b ce` = `ID;Фамилия;Имя;О` (evidence/hexdump-before.txt)
+- Encoding: **KZ-1048** (iconv name `RK1048`) — because every Cyrillic letter is one byte, not a `D0`/`D1` pair (so not UTF-8): "Фамилия" = `d4 e0 ec e8 eb e8 ff`. The surname on line 2 starts with byte `A3`: in KZ-1048 `A3` = "Ә" → "Әбдірахманова"; in Windows-1251 `A3` = "Ј" → "Јбдірахманова", which is wrong. Decoded as KZ-1048, every name, Russian and Kazakh, reads correctly.
+- Line ending: **CRLF** — because line 1 ends with `0d 0a` (offset `0x24`–`0x25`).
+- BOM: **no** — because the file starts with `49 44` ("ID"), not `EF BB BF`. In the fixed file I **added** it, because the brief requires the file to open correctly in Excel by double-click: without a BOM Excel guesses a legacy encoding and shows garbage.
+- Separator: `;` (byte `3b`).
+- Line ending in the fixed file: **LF**, because it is the standard on macOS and Linux and does not break scripts (`$'\r': command not found`); Excel and LibreOffice read LF without problems.
 
+## Fix
+`scripts/fix.sh`, run from this folder with `sh scripts/fix.sh`. It writes `evidence/staff-fixed.csv`; the original is never modified.
+
+```sh
+#!/bin/sh
+# Lab 5: convert staff-broken.csv from KZ-1048 to UTF-8 (with BOM, LF line endings)
+# Run from lab05-encoding/:  sh scripts/fix.sh
+# Python is used because the iconv shipped with macOS may not know RK1048.
+python3 - evidence/staff-broken.csv evidence/staff-fixed.csv <<'PY'
+import sys
+src, dst = sys.argv[1], sys.argv[2]
+text = open(src, 'rb').read().decode('kz1048')                # 1. encoding: KZ-1048
+text = text.replace('\r\n', '\n')                             # 2. line endings: CRLF -> LF
+open(dst, 'w', encoding='utf-8-sig', newline='').write(text)  # 3. UTF-8 with BOM (EF BB BF)
+PY
 ```
-<command>
-<output, trimmed>
-```
 
-## Result
+The script uses Python instead of `iconv` + `sed` from the template: the `iconv` shipped with macOS may not support RK1048, and macOS `sed` (BSD) does not understand `\r` and needs `sed -i ''`. Python's `kz1048` codec does the same conversion.
+
+## Verification
+- `file` now says: (evidence/file-after.txt)
+- The dump starts with `ef bb bf` (BOM); Cyrillic letters are `d0 xx` / `d1 xx` pairs, Kazakh letters `d2 xx` / `d3 xx`.
+- `evidence/opens-correctly.png`: the fixed file in Excel (double-click), LibreOffice Calc (UTF-8, separator `;`) and `cat` — Kazakh letters (Ә, Қ, Ү, Ө) are visible and correct in all three.
 
 ## What did not work the first time
-
-At least one thing. What I saw, what it turned out to be, what I did about it.
-
-## Evidence
-
-- [evidence/](evidence/) — one line per file on what it proves
+- Copying the file into my Ubuntu guest did not work, so I did the lab in the macOS Terminal instead (the brief allows it).
+- The template `fix.sh` (`iconv -f RK1048` + `sed -i 's/\r$//'`) is written for GNU tools on Linux and does not work as-is on macOS, so I rewrote the conversion in Python.
