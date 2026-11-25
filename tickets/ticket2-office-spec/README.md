@@ -69,3 +69,8 @@ The **web developer**, about **build and container start-up times**. I gave the 
 - **Check memory prices first.** I planned 32 GB for everybody, then saw that a DDR5 kit costs more than the CPU and had to rebalance the builds. Starting from the most expensive, most volatile part would have saved time.
 - **Ask about headsets, webcams and backups before pricing.** Sales cannot work four hours of calls on a desktop without them, and they belong in the budget, not in the reserve.
 
+## AI use
+
+| Assignment | Tool | How it was used |
+|---|---|---|
+| Ticket 2 — Office spec | Claude (Anthropic) | Searched Kazakh shop prices, drafted builds.md, budget.csv. I reviewed the builds and can explain each choice. |
