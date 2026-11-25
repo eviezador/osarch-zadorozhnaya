@@ -1,1 +1,43 @@
-
+role,component,model,price_kzt,source,date
+accountant,CPU,"AMD Ryzen 5 7600 BOX (AM5, 6C/12T, iGPU, cooler included) — alfa.kz",99927,https://alfa.kz/parts/cpu/amd/ryzen_5/8277796,2026-11-25
+accountant,Motherboard,"MSI PRO B650M-P (AM5, B650, 4xDDR5, 2xM.2, micro-ATX) — Shop.kz",65590,https://e-katalog.kz/MSI-PRO-B650M-P.htm,2026-11-25
+accountant,Memory,Kingston FURY Beast DDR5-6000 2x8 GB (KF560C36BBEK2-16) — Flexcom.kz,153237,https://e-katalog.kz/KINGSTON-FURY-KF560C36BBEK2-16.htm,2026-11-25
+accountant,SSD,Kingston NV3 1 TB NVMe PCIe 4.0 M.2 (SNV3SM3/1T0) — Ants.kz,87146,https://e-katalog.kz/KINGSTON-SNV3SM3-1T0.htm,2026-11-25
+accountant,PSU,MSI MAG A650BN 650 W 80 PLUS Bronze — Greenprice.kz,23130,https://e-katalog.kz/MSI-MAG.htm,2026-11-25
+accountant,Case,Zalman M5 micro-ATX — Flexcom.kz,25767,https://e-katalog.kz/ZALMAN-M5.htm,2026-11-25
+accountant,OS,"Microsoft Windows 11 Pro 64-bit OEM, Rus — alfa.kz",83410,https://alfa.kz/pc/soft/os/microsoft/oem/8567456,2026-11-25
+accountant,Monitor,"iiyama ProLite XB2797QSU 27"" IPS 2560x1440, height-adjustable — Flexcom.kz",96453,https://e-katalog.kz/IIYAMA-PROLITE-XB2797QSU-B1.htm,2026-11-25
+accountant,Keyboard+mouse,Logitech MK120 wired — Flexcom.kz,12058,https://e-katalog.kz/ua/LOGITECH-DESKTOP-MK120.htm,2026-11-25
+accountant,TOTAL,total for accountant,646718,,
+sales,CPU,"AMD Ryzen 5 7600 BOX (AM5, 6C/12T, iGPU, cooler included) — alfa.kz",99927,https://alfa.kz/parts/cpu/amd/ryzen_5/8277796,2026-11-25
+sales,Motherboard,"MSI PRO B650M-P (AM5, B650, 4xDDR5, 2xM.2, micro-ATX) — Shop.kz",65590,https://e-katalog.kz/MSI-PRO-B650M-P.htm,2026-11-25
+sales,Memory,Apacer NOX DDR5-5200 2x16 GB (AH5U32G52C522NBAA-2) — Directshop.kz,217300,https://e-katalog.kz/APACER-AH5U32G52C522NBAA-2.htm,2026-11-25
+sales,SSD,Kingston NV3 1 TB NVMe PCIe 4.0 M.2 (SNV3SM3/1T0) — Ants.kz,87146,https://e-katalog.kz/KINGSTON-SNV3SM3-1T0.htm,2026-11-25
+sales,PSU,MSI MAG A650BN 650 W 80 PLUS Bronze — Greenprice.kz,23130,https://e-katalog.kz/MSI-MAG.htm,2026-11-25
+sales,Case,Zalman M5 micro-ATX — Flexcom.kz,25767,https://e-katalog.kz/ZALMAN-M5.htm,2026-11-25
+sales,OS,"Microsoft Windows 11 Pro 64-bit OEM, Rus — alfa.kz",83410,https://alfa.kz/pc/soft/os/microsoft/oem/8567456,2026-11-25
+sales,Monitor,"LG 24MR400 23.8"" IPS 1920x1080 100 Hz — Forcecom.kz",52200,https://e-katalog.kz/LG-24MR400.htm,2026-11-25
+sales,Keyboard+mouse,Logitech MK120 wired — Flexcom.kz,12058,https://e-katalog.kz/ua/LOGITECH-DESKTOP-MK120.htm,2026-11-25
+sales,TOTAL,total for sales,666528,,
+webdev,CPU,"AMD Ryzen 5 7600 BOX (AM5, 6C/12T, iGPU, cooler included) — alfa.kz",99927,https://alfa.kz/parts/cpu/amd/ryzen_5/8277796,2026-11-25
+webdev,Motherboard,"MSI PRO B650M-P (AM5, B650, 4xDDR5, 2xM.2, micro-ATX) — Shop.kz",65590,https://e-katalog.kz/MSI-PRO-B650M-P.htm,2026-11-25
+webdev,Memory,Apacer NOX DDR5-5200 2x16 GB (AH5U32G52C522NBAA-2) — Directshop.kz,217300,https://e-katalog.kz/APACER-AH5U32G52C522NBAA-2.htm,2026-11-25
+webdev,SSD,Kingston NV3 1 TB NVMe PCIe 4.0 M.2 (SNV3SM3/1T0) — Ants.kz,87146,https://e-katalog.kz/KINGSTON-SNV3SM3-1T0.htm,2026-11-25
+webdev,PSU,MSI MAG A650BN 650 W 80 PLUS Bronze — Greenprice.kz,23130,https://e-katalog.kz/MSI-MAG.htm,2026-11-25
+webdev,Case,Zalman M5 micro-ATX — Flexcom.kz,25767,https://e-katalog.kz/ZALMAN-M5.htm,2026-11-25
+webdev,OS,"Ubuntu 24.04 LTS (free, GPL / Canonical licence)",0,https://ubuntu.com/download/desktop,2026-11-25
+webdev,Monitor,"AOC Q27B36X 27"" IPS 2560x1440 — Ants.kz",66420,https://e-katalog.kz/AOC-Q27B36X.htm,2026-11-25
+webdev,Keyboard+mouse,Logitech MK120 wired — Flexcom.kz,12058,https://e-katalog.kz/ua/LOGITECH-DESKTOP-MK120.htm,2026-11-25
+webdev,TOTAL,total for webdev,597338,,
+designer,CPU,"AMD Ryzen 5 7600 BOX (AM5, 6C/12T, iGPU, cooler included) — alfa.kz",99927,https://alfa.kz/parts/cpu/amd/ryzen_5/8277796,2026-11-25
+designer,Motherboard,"MSI PRO B650M-P (AM5, B650, 4xDDR5, 2xM.2, micro-ATX) — Shop.kz",65590,https://e-katalog.kz/MSI-PRO-B650M-P.htm,2026-11-25
+designer,Memory,Apacer NOX DDR5-5200 2x16 GB (AH5U32G52C522NBAA-2) — Directshop.kz,217300,https://e-katalog.kz/APACER-AH5U32G52C522NBAA-2.htm,2026-11-25
+designer,GPU,Inno3D GeForce RTX 5060 Twin X2 8 GB — Flexcom.kz,189832,https://e-katalog.kz/INNO3D-GEFORCE-RTX-5060-TWIN-X2.htm,2026-11-25
+designer,SSD,Kingston NV3 1 TB NVMe PCIe 4.0 M.2 (SNV3SM3/1T0) — Ants.kz,87146,https://e-katalog.kz/KINGSTON-SNV3SM3-1T0.htm,2026-11-25
+designer,PSU,MSI MAG A650BN 650 W 80 PLUS Bronze — Greenprice.kz,23130,https://e-katalog.kz/MSI-MAG.htm,2026-11-25
+designer,Case,Zalman M5 micro-ATX — Flexcom.kz,25767,https://e-katalog.kz/ZALMAN-M5.htm,2026-11-25
+designer,OS,"Microsoft Windows 11 Pro 64-bit OEM, Rus — alfa.kz",83410,https://alfa.kz/pc/soft/os/microsoft/oem/8567456,2026-11-25
+designer,Monitor,"MSI MAG 275QF 27"" IPS 2560x1440, sRGB 101 % — Vendara.kz",104654,https://e-katalog.kz/MSI-MAG-275QF.htm,2026-11-25
+designer,Keyboard+mouse,Logitech MK120 wired — Flexcom.kz,12058,https://e-katalog.kz/ua/LOGITECH-DESKTOP-MK120.htm,2026-11-25
+designer,TOTAL,total for designer,908814,,
+ALL,GRAND TOTAL,four machines incl. monitors and OS,2819398,,
